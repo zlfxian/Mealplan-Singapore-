@@ -1,3 +1,7 @@
+#Data are from myfitnesspal
+#I be updating this program often to include more items in the future and location prompts to allow better identification of meals nearby
+#For now do enjoy this little program, where the max amount of food is 4 for each category.
+
 import random
 Calorieamount = input("How much are you looking to eat:" )
 intcalorieamount = int(Calorieamount)

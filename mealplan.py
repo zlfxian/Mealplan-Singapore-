@@ -3,16 +3,31 @@
 #For now do enjoy this little program, where the max amount of food is 4 for each category.
 
 import random
-Calorieamount = input("How much are you looking to eat:" )
+import warnings
+
+warnings.filterwarnings("ignore")
+Calorieamount = input("How much do you aim for your daily calorie intake:" )
 intcalorieamount = int(Calorieamount)
-breakfast = ("Hashbrowns", "Hotcakes", "Kaya Toast", "Peanut Butter Bread")
+breakfast = (
+    "Hashbrowns",
+    "Hotcakes",
+    "Kaya Toast",
+    "Peanut Butter Bread")
 breakfastmp = random.sample(set(breakfast), 1)
-lunch = ("Chicken Rice", "Bak Kut Teh with Rice", "Sliced Fish Soup with Rice", "Wanton Noodles")
+lunch = (
+    "Chicken Rice",
+    "Bak Kut Teh with Rice",
+    "Sliced Fish Soup with Rice",
+    "Wanton Noodles")
 lunchmp = random.sample(set(lunch), 1)
-dinner = ("Chicken Chop with Rice", "Steak & Fries", "Garden Salad with dressing", "Maggi Goreng")
+dinner = (
+    "Chicken Chop with Rice",
+    "Steak & Fries",
+    "Garden Salad with dressing",
+    "Maggi Goreng")
 dinnermp = random.sample(set(dinner), 1)
 p = (breakfastmp, lunchmp, dinnermp)
-print("Your mealplan for today is: ", p)
+print(f"\nYour mealplan for today is: {p}")
 breakfastcalories = (153, 600, 318, 446)
 breakfastprotein = (1, 9, 5, 24)
 breakfastcarbs = (14, 102, 45, 14)
@@ -124,10 +139,11 @@ for i in dinnermp:
     else:
      quit()
 
-print("Your total kcal for this mealplan is: ", mealprepcalories, "kcal")
-print("Total Protein is: ", mealprotein, "g  Total Carbs is: ", mealcarbs, "g  Total Fat is: ", mealfat, "g")
+print(f"\nYour total kcal for this mealplan is: {mealprepcalories} kcal")
+print(f"\nTotal Protein is: {mealprotein}g,  \nTotal Carbs is: {mealcarbs}g,  \nTotal Fat is: {mealfat}g")
 
 if intcalorieamount < mealprepcalories:
-  print("You are in calorie excess")
+  print(f"\nYou are in calorie excess")
 elif intcalorieamount > mealprepcalories:
-  print("You are in calorie deficit")
+  print(f"\nYou are in calorie deficit")
+
